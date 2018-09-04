@@ -2,12 +2,12 @@
 import platform
 
 headers={"User-Agent":"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/5"}
-username='chinaylssly@qq.com'
-password=u'chinasun00'
+username='poro用户名'
+password=u'poro密码'
 
 
-email='chinaylssly@qq.com' 
-code='nxxqptscflqubbfh'
+email='qq邮箱' 
+code='qq邮箱授权码'
 
 system=platform.system()
 
