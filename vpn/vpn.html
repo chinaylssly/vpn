@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>
+  <meta charset="utf-8" />
+  <title>Poro免费版</title>
+  <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+  <link rel="stylesheet" href="/geek/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="/geek/css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="/geek/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="/geek/css/font.css" type="text/css" />
+  <link rel="stylesheet" href="/geek/js/calendar/bootstrap_calendar.css" type="text/css" />
+  <link rel="stylesheet" href="/geek/css/app.css" type="text/css" />
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <!--[if lt IE 9]>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <section class="vbox">
+    <header class="bg-dark dk header navbar navbar-fixed-top-xs">
+      <div class="navbar-header aside-md">
+        <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="/user" class="navbar-brand"><img src="/geek/images/logo.png" class="m-r-sm">Poro 免费版</a>
+        <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".nav-user">
+          <i class="fa fa-cog"></i>
+        </a>
+      </div>
+      
+      <ul class="nav navbar-nav navbar-right m-n hidden-xs nav-user">
+
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="thumb-sm avatar pull-left">
+              <img src="/geek/images/avatar.jpg">
+            </span>
+            新会员 <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu animated fadeInRight">
+            <span class="arrow top"></span>
+           
+          
+            <li>
+              <a href="/user/profile">个人资料
+              </a>
+</li>
+            <li>
+              <a href="/user/edit">修改资料</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="/user/logout">退出登录</a>
+            </li>
+          </ul>
+        </li>
+      </ul>      
+    </header>
+    <section>
+      <section class="hbox stretch">
+        <!-- .aside -->
+        <aside class="bg-dark lter aside-md hidden-print" id="nav">          
+          <section class="vbox">
+            <header class="header bg-primary lter text-center clearfix">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-dark btn-icon" title="New project"><i class="fa fa-plus"></i></button>
+                <div class="btn-group hidden-nav-xs">
+                  <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+                    教程与客户端
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu text-left">
+                    <li><a href="/help">使用教程</a></li>
+                    <li><a href="/services">客户端下载</a></li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </header>
+            <section class="w-f scrollable">
+              <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="5px" data-color="#333333">
+                
+                <!-- nav -->
+                <nav class="nav-primary hidden-xs">
+                  <ul class="nav">
+                    <li  class="active">
+                      <a href="/user"   class="active">
+                        <i class="fa fa-th-large icon">
+                          <b class="bg-danger"></b>
+                        </i>
+                        <span>用户中心</span>
+                      </a>
+                    </li>
+                    <li >
+                      <a href="/user/node"  >
+                        <i class="fa fa-columns icon">
+                          <b class="bg-warning"></b>
+                        </i>
+
+                        <span>线路列表</span>
+                      </a>
+ 
+                    </li>
+					<!--
+                    <li >
+                      <a href="#layout"  >
+                       <i class="fa fa-flask icon">
+                          <b class="bg-success"></b>
+                        </i>
+                        <span class="pull-right">
+                          <i class="fa fa-angle-down text"></i>
+                          <i class="fa fa-angle-up text-active"></i>
+                        </span>
+                        <span>流量管理</span>
+                      </a>
+                      <ul class="nav lt">
+                       
+                        <li >
+                          <a href="/user/code" >                                                        
+                            <i class="fa fa-angle-right"></i>
+                            <span>流量兑换</span>
+                          </a>
+                        </li>
+ 
+                      </ul>
+                    </li>-->
+                    <li >
+                      <a href="#user"  >
+                        <i class="fa fa-user icon">
+                          <b class="bg-info"></b>
+                        </i>
+						<span class="pull-right">
+                          <i class="fa fa-angle-down text"></i>
+                          <i class="fa fa-angle-up text-active"></i>
+                        </span>
+                        <span>个人管理</span>
+                      </a>
+					    <ul class="nav lt">
+						 <li >
+                          <a href="/user/invite" >                                                        
+                            <i class="fa fa-angle-right"></i>
+                            <span>推荐注册</span>
+                          </a>
+                        </li>
+						 <li >
+                          <a href="/user/profile" >                                                        
+                            <i class="fa fa-angle-right"></i>
+                            <span>个人资料</span>
+                          </a>
+                        </li>
+                        <li >
+                          <a href="/user/edit" >                                                        
+                            <i class="fa fa-angle-right"></i>
+                            <span>修改资料</span>
+                          </a>
+                        </li>
+
+						                      </ul>
+                    </li>
+                    <li >
+                      <a href="#kf"  >
+
+                        <i class="fa fa-envelope-o icon">
+                          <b class="bg-primary dker"></b>
+                        </i>
+						                        <span class="pull-right">
+                          <i class="fa fa-angle-down text"></i>
+                          <i class="fa fa-angle-up text-active"></i>
+                        </span>
+                        <span>客服工单</span>
+                      </a>
+					   <ul class="nav lt">
+                        <li >
+                          <a href="/user/ticket" >  
+						  <b class="badge bg-info pull-right">荐</b>                                                      
+                            <i class="fa fa-angle-right"></i>
+                            <span>工单系统</span>
+                          </a>
+                        </li>
+							<!--					  
+						    <li >
+                          <a href="mqq://im/chat?chat_type=wpa&uin=40248933&version=1&src_type=web" >                                                        
+                            <i class="fa fa-angle-right"></i>
+                            <span>客服QQ手机端</span>
+                          </a>
+                        </li>
+						  <li >
+                          <a href="tencent://message/?uin=40248933" >                                                        
+                            <i class="fa fa-angle-right"></i>
+                            <span>客服QQ电脑端</span>
+                          </a>
+                        </li>-->
+						
+						</ul>
+                    </li>
+                    <li >
+                      <a href="http://poro.link/"  >
+
+                        <i class="fa fa-share-square-o icon">
+                          <b class="bg-info dker"></b>
+                        </i>
+				
+                        <span>Poro专业版</span>
+                      </a>
+
+                    </li>
+					                    <li >
+                      <a href="https://poro.plus/"  >
+
+                        <i class="fa fa-share-square-o icon">
+                          <b class="bg-info dker"></b>
+                        </i>
+				
+                        <span>Poro网址发布页</span>
+                      </a>
+
+                    </li>
+                  </ul>
+                </nav>
+                <!-- / nav -->
+              </div>
+            </section>
+            
+            <footer class="footer lt hidden-xs b-t b-dark">
+
+
+              <a href="#nav" data-toggle="class:nav-xs" class="pull-right btn btn-sm btn-dark btn-icon">
+                <i class="fa fa-angle-left text"></i>
+                <i class="fa fa-angle-right text-active"></i>
+              </a>
+
+            </footer>
+          </section>
+        </aside>
+        <!-- /.aside -->
+
+
+        <section id="content">
+          <section class="vbox">          
+            <section class="scrollable wrapper">
+              <div class="row">
+                <div class="col-lg-12">
+                  <!-- .breadcrumb -->
+                  <ul class="breadcrumb">
+                    <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                   
+                    <li class="active">用户中心</li>
+                  </ul>
+                  <!-- / .breadcrumb -->
+                </div>
+           </div>
+		   
+		   
+					
+		   
+		   
+              <section class="panel panel-default">
+			   
+                <div class="row m-l-none m-r-none bg-light lter">
+                  <div class="col-sm-6 col-md-3 padder-v b-r b-light">
+                    <span class="fa-stack fa-2x pull-left m-r-sm">
+                      <i class="fa fa-circle fa-stack-2x text-info"></i>
+                      <i class="fa fa-tachometer fa-stack-1x text-white"></i>
+                    </span>
+                    <a class="clear">
+                      <span class="h3 block m-t-xs"><strong>2.95GB</strong></span>
+                      <small class="text-muted text-uc">总流量</small>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 col-md-3 padder-v b-r b-light lt">
+                    <span class="fa-stack fa-2x pull-left m-r-sm">
+                      <i class="fa fa-circle fa-stack-2x text-warning"></i>
+                      <i class="fa fa-indent fa-stack-1x text-white"></i>
+                      
+                    </span>
+                    <a class="clear">
+                      <span class="h3 block m-t-xs"><strong id="bugs">1014.96MB</strong></span>
+                      <small class="text-muted text-uc">已经使用</small>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 col-md-3 padder-v b-r b-light">                     
+                    <span class="fa-stack fa-2x pull-left m-r-sm">
+                      <i class="fa fa-circle fa-stack-2x text-danger"></i>
+                      <i class="fa fa-outdent fa-stack-1x text-white"></i>
+                     
+                    </span>
+                    <a class="clear">
+                      <span class="h3 block m-t-xs"><strong id="firers">1.96GB</strong></span>
+                      <small class="text-muted text-uc">剩余流量</small>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 col-md-3 padder-v b-r b-light lt">
+                    <span class="fa-stack fa-2x pull-left m-r-sm">
+                      <i class="fa fa-circle fa-stack-2x text-success"></i>
+                      <i class="fa fa-male fa-stack-1x text-white"></i>
+                    </span>
+                    <a class="clear">
+                      <span class="h3 block m-t-xs"><strong>				   正常可用
+				   </strong></span>
+                      <small class="text-muted text-uc">账号状态</small>
+                    </a>
+                  </div>
+                </div>
+              </section>
+              <div class="row">
+                <div class="col-md-12">
+                  <section class="panel panel-default">
+                    <header class="panel-heading font-bold">账户连接信息</header>
+
+                    <footer class="panel-footer bg-white no-padder">
+                      <div class="row text-center no-gutter">
+                        <div class="col-xs-3 b-r b-light">
+                          <span class="h4 font-bold m-t block">41442</span>
+                          <small class="text-muted m-b block">连接端口</small>
+                        </div>
+                        <div class="col-xs-3 b-r b-light">
+                          <span class="h4 font-bold m-t block">6uiOMK</span>
+                          <small class="text-muted m-b block">连接密码</small>
+                        </div>
+                        <div class="col-xs-3 b-r b-light">
+                          <span class="h4 font-bold m-t block">chacha20</span>
+                          <small class="text-muted m-b block">加密方式</small>
+                        </div>
+                        <div class="col-xs-3">
+                          <span class="h4 font-bold m-t block">2018-08-31 21:07:02</span>
+                          <small class="text-muted m-b block">最近连接</small>                        
+                        </div>
+                      </div>
+                    </footer>
+                  </section>
+                </div>
+
+				
+
+                
+              </div>
+           
+                
+              <div class="row">
+                <div class="col-md-8">
+		       <section class="panel panel-default">
+                    <header class="panel-heading font-bold">                    
+                      <span class="label bg-dark"></span> 最新公告栏
+                    </header>
+                    <section class="panel-body slim-scroll" data-height="160px">
+                      					  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2018-07-21 13:43:12</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">GFW高墙发作，线路已全部更换。请重新导入节点。</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2018-06-04 22:04:29</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">免费版域名被墙，新域名为：poro.ws 请相互转告。同时邀请链接需要更换域名，邀请码不变。</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2018-04-26 16:43:17</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">美国洛杉矶线路IP已经更换</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2018-04-21 20:49:47</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">美国洛杉矶线路IP已经更换，节点服务器维护完毕！
+</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2018-04-19 12:28:15</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">免费版域名被墙，新域名为：poro.pw 请相互转告。同时邀请链接需要更换域名，邀请码不变。</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2018-03-17 16:22:23</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">新俄罗斯线路IP已经更换</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2018-03-02 12:31:22</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">美国洛杉矶线路A线路IP已经更换</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2018-01-31 13:29:08</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">美国洛杉矶线路B线路IP已经更换</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2018-01-20 00:07:07</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">Poro免费版与专业版主站域名被屏蔽，目前免费版域名poro.top已更换为poro.me，专业版poro.pro更换为 poro.link
+
+感谢大家一直以来的支持，请相互告知，如使用免费版邀请他人注册的请将域名的.top改为.me 即可，其他无需修改</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2018-01-04 02:15:39</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">美国洛杉矶线路B服务器地址已更换，请在线路列表中查看</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2017-12-23 16:09:17</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">亲爱的各位会员，为了避免服务器负载过大，浪费资源。我们每月会不定时清理注册后未使用与从未签到的账号。确保正常使用的会员可以稳定正常的使用，感谢大家的支持！</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2017-10-30 18:10:13</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">Poro免费版将于今晚进行升级，并且清理注册后未使用的会员。</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2017-10-09 18:30:20</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">Poro免费版今天下午5点左右两个免费的节点IP均被检测屏蔽，无法ping通连接，目前正在修复更换，专业版所有节点不受影响正常运行。Poro免费版的存在只是为了给各位不常使用且没有多大需求的各位网友使用，请大家珍惜。虽然我们只提供两个免费节点，但我们的服务器也是需要费用的，如果你觉得不错的话可以购买我们的专业版套餐，有更好的上网体验和技术支持。谢谢大家支持。</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2017-09-03 00:46:16</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">iOS客户端 【Potaso Lite 土豆丝入门版】正在限免，有使用iOS手机的可以到App Store 里下载备用，防止中国区下架扶墙APP。导致需要用盗版或者转区购买。</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2017-08-19 01:27:48</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">各位会员，为了更加安全的连接避免检测和兼容更多客户端，本站的加密算法模式已经从aes-256-ctr更改为chacha20.请在你的客户端里选择加密模式为：chacha20。</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     						  <article class="media">
+                        
+                        <div class="media-body">
+						公告内容：
+                          <div class="pull-right media-xs text-center text-muted">
+                            <strong class="h5">2017-02-10 00:48:30</strong><br>
+                            
+                          </div>
+                          <div class="line pull-in"></div>
+                          
+                          <small class="m-t-sm">亲爱的各位会员，本站重新开放邀请推荐注册赠送流量活动。请点击个人管理-> 推荐注册 获取您的个人唯一推荐码！</small>
+                        </div>
+                      </article>	
+                      <div class="line pull-in"></div>
+                     		  
+                    </section> 				
+                  </section>		
+				 
+				</div>
+				 
+				
+				<div class="col-md-4">
+                  <section class="panel panel-default">
+                    <header class="panel-heading font-bold">签到获得流量</header>
+                    
+                    <div class="panel-body">
+                      <div>
+                        
+						                           <button id="checkin" class="btn btn-success  btn-flat margin">无法签到</a></button>
+                        </span>
+                      </div>
+                      <div class="line pull-in"></div>
+                      <div class="row m-t-sm">
+                        <div class="col-xs-8">
+                          <small class="text-muted block"><p id="checkin-msg"></p></small>
+                          <span> 24小时内可以签到一次。
+						  <br><hr>上次签到时间：2018-09-02 12:24:12</span>
+                        </div>
+
+                      </div>
+                    </div>
+                  </section>
+                </div>
+
+	
+            </section>
+          </section>
+          <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+        </section>
+		
+      </section>
+    </section>
+  </section>
+  <script src="/geek/js/jquery.qrcode.min.js"></script>
+  <script src="/geek/js/jquery.min.js"></script>
+  <script src="/geek/js/bootstrap.js"></script>
+  <script src="/geek/js/app.js"></script>  
+  <script src="/geek/js/slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="/geek/js/sortable/jquery.sortable.js"></script>
+  <div style="display:none;">
+			
+</div>
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+        $("#checkin").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/user/checkin",
+                dataType: "json",
+                success: function (data) {
+                    $("#checkin-msg").html(data.msg);
+                    $("#checkin-btn").hide();
+                },
+                error: function (jqXHR) {
+                    alert("发生错误：" + jqXHR.status);
+                }
+            })
+        })
+    })
+</script>
